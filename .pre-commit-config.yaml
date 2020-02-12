@@ -1,0 +1,12 @@
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: 'master'
+  hooks:
+  - id: flake8
+
+- repo: https://github.com/pre-commit/mirrors-isort
+  rev: 'master'
+  hooks:
+  - id: isort
+    args: [
+      '--check-only',
+    ]
