@@ -1,9 +1,11 @@
 import requests
 from allauth.socialaccount.models import SocialToken
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.utils import timezone
 
 
+@login_required
 def next_ten_events(request):
     user = request.user
     social_token = SocialToken.objects.filter(account__user=user, account__provider='google').first()
