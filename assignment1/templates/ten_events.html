@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your 10 Next Events</title>
+</head>
+<body>
+  <ul>
+  {% for event in calendar_data.items %}
+    <li>{{ event.start.dateTime }} : {{ event.summary }}</li>
+  {% endfor %}
+  </ul>
+</body>
+</html>

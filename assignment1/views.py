@@ -1,6 +1,6 @@
 import requests
 from allauth.socialaccount.models import SocialToken
-from django.http import JsonResponse
+from django.shortcuts import render
 from django.utils import timezone
 
 
@@ -19,4 +19,6 @@ def next_ten_events(request):
         },
     )
 
-    return JsonResponse(response.json())
+    print(type(response.json()))
+
+    return render(request, 'ten_events.html', {'calendar_data': response.json()})
