@@ -25,7 +25,10 @@ SECRET_KEY = 's5)rb#i+yp%4ez93^so7x9s-gkyj9%nutt#^1!bl9z@msf&+!x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1',
+    'infralabs.cs.ui.ac.id',
+]
 
 
 # Application definition
