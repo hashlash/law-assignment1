@@ -1,4 +1,4 @@
-Django==2.2.10
+Django==2.2.18
 django-allauth==0.41.0
 flake8==3.7.9
 pre-commit==1.21.0
